@@ -1,0 +1,54 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1 col-md-offset-11">
+                <button type="button" class="btn btn-md btn-block" ng-click="back();"><i class="fa fa-chevron-left" aria-hidden="true"></i>&nbsp;back</button>
+            </div>
+        </div>
+        <div class="row">
+            <h2 class="text-center">{{map.name}}</h2>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-6">
+                <p><label>Phone:</label> {{map.phno}}</p>
+            </div>
+            <div class="col-md-6">
+                <p><label>E-mail:</label> {{map.email}}</p>
+            </div>
+        </div>
+        <br>
+        <form class="form-group">
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="message">Send message as Text</label>
+                    <input id="message" name="Message" class="form-control" type="text" maxlength="140" pattern="^.+$">
+                </div>
+                <div class="col-md-6">
+                    <label for="message">Send message as Mail</label>
+                    <input id="message" name="Message" class="form-control" type="text" pattern="^.+$">
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-3 col-md-offset-1">
+                    <button class="btn btn-block btn-primary"><i class="fa fa-comments-o" aria-hidden="true"></i>&nbsp;Send Text</button>
+                </div>
+                <div class="col-md-3 col-md-offset-4">
+                    <button class="btn btn-block btn-info"><i class="fa fa-envelope-o" aria-hidden="true"></i>&nbsp;Send Mail</button>
+                </div>
+            </div>
+        </form>
+        <br>
+        <p><label>Address:&nbsp;</label>{{map.address}}</p>
+        <br>
+        <br>
+        <div class="row container">
+            <img src="https://maps.googleapis.com/maps/api/staticmap?center=%20{{map.address}}&zoom=15&markers=size:small%7Ccolor:red%7C%20{{map.address}}&size=600x200&scale=2&key=AIzaSyA2w1MUjonxaGnVyPZX0A7HMof1_lUCxXY" class="map">
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+</section>

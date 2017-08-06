@@ -1,0 +1,53 @@
+Following are the api's for contact management as discussed in class.
+
+
+1. Get all contacts
+
+url : https://zenways-contact.herokuapp.com/api/contacts
+method: GET
+
+2. Get a particular contact
+
+url : https://zenways-contact.herokuapp.com/api/contact/<contact id {will be represented as "_id" in any contact object}>
+method: GET
+
+
+
+3. Create a new contacts
+
+url : https://zenways-contact.herokuapp.com/api/contact
+method: POST
+body: 
+{
+	"name":"PCM",
+	"email":"m@gmail.com",
+	"address":"Test 5",
+	"phno":"4561243"
+}
+
+3. Update a particular contact
+
+url : https://zenways-contact.herokuapp.com/api/contact/<contact id {will be represented as "_id" in any contact object}>
+method: PUT
+body:
+{
+	"name":"PCM2",
+	"email":"m2@gmail.com",
+	"address":"Test 53",
+	"phno":"4561244"
+}
+
+4. Delete a particular contact
+
+url : https://zenways-contact.herokuapp.com/api/contact/<contact id {will be represented as "_id" in any contact object}>
+method: Delete
+
+
+
+
+
+
+To use all these keys you need to pass a key in headers.
+
+key : 'ZENWAYS01PIET01'
+Thanks

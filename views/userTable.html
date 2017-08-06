@@ -1,0 +1,27 @@
+        <section>
+            <br>
+            <div class="container">
+                <table class="table table-striped">
+                    <thead>
+                        <th><i class="fa fa-check" aria-hidden="true"></i>&nbsp;CHECK</th>
+                        <th><i class="fa fa-user-o" aria-hidden="true"></i>&nbsp;NAME</th>
+                        <th><i class="fa fa-mobile" aria-hidden="true"></i>&nbsp;PHONE</th>
+                        <th><i class="fa fa-envelope-o" aria-hidden="true"></i>&nbsp;EMAIL</th>
+                        <th><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;ADDRESS</th>
+                        <th><i class="fa fa-pencil" aria-hidden="true"></i>&nbsp;EDIT</th>
+                        <th><i class="fa fa-trash-o" aria-hidden="true"></i>&nbsp;DELETE</th>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="d in display">
+                            <td><form class="form-group"><input type="checkbox"></form></td>
+                            <td><span ng-click="showMap(d);" style="cursor: pointer;">{{d.name}}</span></td>
+                            <td><span ng-click="showMap(d);" style="cursor: pointer;">{{d.phno}}</span></td>
+                            <td><span ng-click="showMap(d);" style="cursor: pointer;">{{d.email}}</span></td>
+                            <td><span ng-click="showMap(d);" style="cursor: pointer;">{{d.address}}</span></td>
+                            <td><button class="btn btn-md btn-warning" ng-click="edit(d);"><i class="fa fa-pencil" aria-hidden="true"></i>&nbsp;Edit</button></td>
+                            <td><button class="btn btn-md btn-danger" ng-click="remove(d._id);"><i class="fa fa-trash-o" aria-hidden="true"></i>&nbsp;Remove</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>

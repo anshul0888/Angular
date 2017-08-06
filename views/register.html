@@ -1,0 +1,62 @@
+<section>
+            <br>
+            <div class="container">
+                <div>
+                    <p class="text-center mainHead"><i class="fa fa-smile-o" aria-hidden="true"></i>&nbsp;Register UrSelf !!</p>
+                </div>
+                <br>
+                <div id="formDiv" class="formDiv">
+                    <form name="userRegister" class="form-group" ng-submit="registerSubmit()" novalidate>
+                        <div class="row container-fluid">
+                            <label for="name"><i class="fa fa-user-o" aria-hidden="true"></i>&nbsp;Name</label>
+                            <input id="name" name="Name" type="text" class="form-control" placeholder="John Ivey" ng-model="user.name" pattern="^[A-Za-z\s]*$" required>
+                            <span ng-show="userRegister.Name.$touched || userRegister.$submitted" ng-messages="userRegister.Name.$error" class="error">
+                                <span ng-message="required">You can't leave this.</span>
+                                <span ng-message="pattern">Please enter only letters (A-Z).</span>
+                            </span>
+                        </div>
+                        <br>
+                        <div class="row container-fluid">
+                            <label for="phone"><i class="fa fa-mobile" aria-hidden="true"></i>&nbsp;Phone</label>
+                            <input id="phone" name="Phone" type="text" class="form-control" placeholder="99945-xxxxx" ng-model="user.phno" maxlength="10" pattern="^[789][0-9]{9}$" required>
+                            <span ng-show="userRegister.Phone.$touched || userRegister.$submitted" ng-messages="userRegister.Phone.$error" class="error">
+                                <span ng-message="required">You can't leave this.</span>
+                                <span ng-message="pattern">Please enter a valid 10 digit phone number.</span>
+                            </span>
+                        </div>
+                        <br>
+                        <div class="row container-fluid">
+                            <label for="email"><i class="fa fa-envelope-o" aria-hidden="true"></i>&nbsp;Email</label>
+                            <input id="email" name="Email" type="text" class="form-control" placeholder="johnivey@gmail.com" ng-model="user.email" pattern="^[a-zA-Z_.0-9]+[@][a-zA-z_.]+$" required>
+                            <span ng-show="userRegister.Email.$touched || userRegister.$submitted" ng-messages="userRegister.Email.$error" class="error">
+                                <span ng-message="required">You can't leave this.</span>
+                                <span ng-message="pattern">Please enter only letters (a-z), numbers and period.</span>
+                            </span>
+                        </div>
+                        <br>
+                        <div class="row container-fluid">
+                            <label for="address"><i class="fa fa-address-book-o" aria-hidden="true"></i>&nbsp;Address</label>
+                            <input id="address" name="Address" type="text" class="form-control" placeholder="City, State, Country" ng-model="user.address" required>
+                            <span ng-show="userRegister.Address.$touched || userRegister.$submitted" ng-messages="userRegister.Address.$error" class="error">
+                                <span ng-message="required">You can't leave this.</span>
+                            </span>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <button type="submit" class="btn btn-md btn-block btn-success"><i class="fa fa-paper-plane-o" aria-hidden="true"></i>&nbsp;Submit</button>
+                            </div>
+                            <div class="col-md-3">
+                                <button type="button" class="btn btn-md btn-block btn-primary" ng-click="update()"><i class="fa fa-paper-plane-o" aria-hidden="true"></i>&nbsp;Update</button>
+                            </div>
+                            <div class="col-md-3">
+                                <button type="reset" class="btn btn-md btn-block btn-warning"><i class="fa fa-eraser" aria-hidden="true"></i>&nbsp;Reset</button>
+                            </div>
+                            <div class="col-md-3">
+                                <button type="button" class="btn btn-md btn-block btn-danger"><i class="fa fa-times" aria-hidden="true"></i>&nbsp;Cancel</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
